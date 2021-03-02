@@ -10,4 +10,6 @@ public interface StudentDao {
 
 	void addStudent(Student student);
 
+	Student findStudent(int id);
+
 }

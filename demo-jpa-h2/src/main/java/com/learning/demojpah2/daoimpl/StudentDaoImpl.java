@@ -29,4 +29,11 @@ public class StudentDaoImpl implements StudentDao{
 		studentRepo.save(student);
 	}
 
+	@Override
+	public Student findStudent(int id) {
+		// TODO Auto-generated method stub
+		Student student=studentRepo.findById(id).orElse(new Student());
+		return student;
+	}
+
 }
