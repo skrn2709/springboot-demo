@@ -33,4 +33,14 @@ public class StudentController {
 		mv.addObject("students", studentList);
 		return mv;
 	}
+	
+	@RequestMapping("/addStudent")
+	public ModelAndView addStudent(Student student) {
+		ModelAndView mv=new ModelAndView("home.jsp");
+		
+		studentService.addStudent(student);
+		mv.addObject("message","added into db");
+		
+		return mv;
+	}
 }

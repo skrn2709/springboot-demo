@@ -8,4 +8,6 @@ public interface StudentDao {
 
 	List<Student> fetchAllStudents();
 
+	void addStudent(Student student);
+
 }

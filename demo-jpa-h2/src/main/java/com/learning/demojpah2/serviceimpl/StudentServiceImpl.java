@@ -18,4 +18,10 @@ public class StudentServiceImpl implements StudentService{
 	public List<Student> fetchAllStudents(){
 		return studentDao.fetchAllStudents();
 	}
+
+	@Override
+	public void addStudent(Student student) {
+		// TODO Auto-generated method stub
+		studentDao.addStudent(student);
+	}
 }

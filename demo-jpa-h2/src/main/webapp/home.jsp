@@ -12,5 +12,7 @@
 		<input type="text" name="name"><br>
 		<input type="submit" name="submit"><br>	
 	</form>
+	<br>
+	${message}
 </body>
 </html>
