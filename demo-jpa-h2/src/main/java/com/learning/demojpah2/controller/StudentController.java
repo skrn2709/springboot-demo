@@ -22,12 +22,12 @@ public class StudentController {
 	
 	@RequestMapping("/")
 	public String home() {
-		return "home.jsp";
+		return "home";
 	}
 	
 	@RequestMapping("/fetchAllStudents")
 	public ModelAndView fetchAllStudents() {
-		ModelAndView mv=new ModelAndView("showView.jsp");
+		ModelAndView mv=new ModelAndView("showView");
 		
 		//List<Student> studentList=(List<Student>) studentRepository.findAll();
 		List<Student> studentList=(List<Student>) studentService.fetchAllStudents();
@@ -38,7 +38,7 @@ public class StudentController {
 	
 	@RequestMapping("/addStudent")
 	public ModelAndView addStudent(Student student) {
-		ModelAndView mv=new ModelAndView("home.jsp");
+		ModelAndView mv=new ModelAndView("home");
 		
 		studentService.addStudent(student);
 		mv.addObject("message","added into db");
@@ -48,7 +48,7 @@ public class StudentController {
 	
 	@RequestMapping("/fetchStudent")
 	public ModelAndView findStudent(@RequestParam int id) {
-		ModelAndView mv=new ModelAndView("showView.jsp");
+		ModelAndView mv=new ModelAndView("showView");
 		List<Student> students=new ArrayList<Student>();
 		
 		Student student=studentService.findStudent(id);

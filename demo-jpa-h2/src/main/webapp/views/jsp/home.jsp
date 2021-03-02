@@ -14,5 +14,17 @@
 	</form>
 	<br>
 	${message}
+	<br><br>
+	<form action="fetchAllStudents">
+		
+		<input type="submit" value="fetchAllStudents"><br>	
+	</form>
+	<br>
+	<br><br>
+	<form action="fetchStudent">
+		<input type="text" name="id"><br>
+		<input type="submit" value="fetchStudent"><br>	
+	</form>
+	<br>
 </body>
 </html>

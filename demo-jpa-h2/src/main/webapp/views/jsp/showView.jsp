@@ -7,6 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<br><br><br>
+	<div align="center">
+	<form action="/" >
+		<input type="submit" value="home"><br>
+	</form>
+	</div>
+	<br><br><br>
 	${students}
+	<br><br><br>
+	
 </body>
 </html>
