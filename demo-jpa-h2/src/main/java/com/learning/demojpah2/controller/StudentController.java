@@ -9,12 +9,14 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.learning.demojpah2.model.Student;
 import com.learning.demojpah2.repository.StudentRepository;
+import com.learning.demojpah2.service.StudentService;
+import com.learning.demojpah2.serviceimpl.StudentServiceImpl;
 
 @Controller
 public class StudentController {
 	
 	@Autowired
-	private StudentRepository studentRepository;
+	private StudentService studentService;
 	
 	@RequestMapping("/")
 	public String home() {
@@ -25,9 +27,10 @@ public class StudentController {
 	public ModelAndView fetchAllStudents() {
 		ModelAndView mv=new ModelAndView("showView.jsp");
 		
-		List<Student> studentList=(List<Student>) studentRepository.findAll();
-		mv.addObject("students", studentList);
+		//List<Student> studentList=(List<Student>) studentRepository.findAll();
+		List<Student> studentList=(List<Student>) studentService.fetchAllStudents();
 		
+		mv.addObject("students", studentList);
 		return mv;
 	}
 }
