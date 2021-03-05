@@ -26,12 +26,18 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
-	@RequestMapping("/")
+	@RequestMapping(
+			path="/",
+			method=RequestMethod.GET
+			)
 	public String home() {
 		return "home";
 	}
 	
-	@RequestMapping("/fetchAllStudents")
+	@RequestMapping(
+			path="/fetchAllStudents",
+			method=RequestMethod.GET
+			)
 	public ModelAndView fetchAllStudents() {
 		ModelAndView mv=new ModelAndView("showView");
 		
@@ -42,8 +48,11 @@ public class StudentController {
 		return mv;
 	}
 	
-	@RequestMapping("/addStudent")
-	public ModelAndView addStudent(Student student) {
+	@RequestMapping(
+			path="/addStudent",
+			method=RequestMethod.POST
+			)
+	public ModelAndView addStudent(@RequestBody Student student) {
 		ModelAndView mv=new ModelAndView("home");
 		
 		studentService.addStudent(student);
@@ -52,7 +61,10 @@ public class StudentController {
 		return mv;
 	}
 	
-	@RequestMapping("/fetchStudent")
+	@RequestMapping(
+			path= "/fetchStudent",
+			method=RequestMethod.GET
+			)
 	public ModelAndView findStudent(@RequestParam int id) {
 		ModelAndView mv=new ModelAndView("showView");
 		List<Student> students=new ArrayList<Student>();
@@ -66,7 +78,10 @@ public class StudentController {
 		return mv;
 	}
 	
-	@RequestMapping("/fetchAllStudentsJson")
+	@RequestMapping(
+			path="/fetchAllStudentsJson",
+			method=RequestMethod.GET
+					)
 	@ResponseBody
 	public List<Student> fetchAllStudentsJson(){
 		
