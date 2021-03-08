@@ -52,7 +52,7 @@ public class StudentController {
 			path="/addStudent",
 			method=RequestMethod.POST
 			)
-	public ModelAndView addStudent(@RequestBody Student student) {
+	public ModelAndView addStudent( Student student) {
 		ModelAndView mv=new ModelAndView("home");
 		
 		studentService.addStudent(student);
