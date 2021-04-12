@@ -1,16 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
 <link rel="stylesheet" type="text/css" href="css/style.css"	>
-<!-- 	href="${pageContext.request.contextPath}/webapp/views/css/style.css"  !-->	
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
-<title>Demo Project</title>
-</head>
-<body>
-	<div class="dropdown">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >		
+		
+		<div class="dropdown">
 		<nav>
 			<a href="#" class="title">DemoApp</a>
 			<ul>
@@ -44,27 +35,4 @@
 			</ul>
 		</nav>
 	</div>
-	<form action="addStudent" method="post">
 	
-		<input type="text" name="id"><br>
-		<input type="text" name="name"><br>
-		<input type="submit" name="submit"><br>	
-	
-	</form>
-	
-	<br>
-	${message}
-	<br><br>
-	<form action="fetchAllStudents">
-		
-		<input type="submit" value="fetchAllStudents"><br>	
-	</form>
-	<br>
-	<br><br>
-	<form action="fetchStudent">
-		<input type="text" name="id"><br>
-		<input type="submit" value="fetchStudent"><br>	
-	</form>
-	<br>
-</body>
-</html>

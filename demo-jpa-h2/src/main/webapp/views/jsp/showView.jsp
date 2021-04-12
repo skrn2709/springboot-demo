@@ -10,9 +10,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<jsp:include page="header_new.jsp"/>
 <title>Insert title here</title>
 </head>
 <body>
+	
 	<br><br><br>
 	<div align="center">
 	<form action="/" >
